@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+
+
+body {
+        background-color:#36393f;
+        font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        h1 {
+                color: white;
+        }
+
+        p {
+                color: white;
+        }
+
+        h2 {
+                color: white;
+        }
+
+
+.button {
+  border-radius: 4px;
+  background-color:#36393f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+        .navbar {
+                overflow: hidden;
+                background-color: #36393f;
+        }
+
+        .header {
+                padding: 80px;
+                text-allign: center;
+                background:#36393f;
+                color: white;
+        }
+
+        .grid1 {
+                padding: 100px;
+                text-allign: center;
+                background: #7289DA;
+                color: white;
+        }
+        
+    
+
+        .navbar a {
+                float: left;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 20px;
+        }
+
+        .whiteADD {
+                color: white
+        }
+
+        .navbar a:hover{
+                background-color: #7289DA;
+                
+        }
+
+        @keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 10.9em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.text_type {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+}
+
+.text_1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+
+.text_1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+    border: 10px solid #ffffff;
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid rgb(255, 255, 255);
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+}
+
+.wordCarousel {
+    font-size: 36px;
+    font-weight: 100;
+    color: #939393;
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 10px;
+        margin-top: -10px;
+        li {
+            font-family: Serif;
+            color: #ccc;
+            font-weight: 700;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+        }
+    }
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.leFlyInBottom span { animation-name: leFlyInBottom }
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes leFlyInBottom {
+    0% {
+        transform: translate(0px, 80px);
+        opacity: 0
+    }
+    50% {
+        transform: translate(10px, -50px);
+        animation-timing-function: ease-in-out
+    }
+}
+
+.wrapper {
+    text-align: center;
+    h1 {
+        color: #fff;
+        font-size: 92px;
+        font-family: "ubuntu";
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+        background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 1.5s linear infinite;
+        display: inline-block;
+    }
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
